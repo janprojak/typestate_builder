@@ -19,6 +19,8 @@ project(typestate_builder)
 # project sources
 
 set(SOURCES
+    car.hpp
+    car_builder.hpp
     main.cpp
 )
 
