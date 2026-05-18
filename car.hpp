@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include "mandatory_values.hpp"
+
 #include <ostream>
 #include <string>
 #include <cassert>
@@ -13,6 +15,9 @@
 
 template<typename ... MandatoryValues>
 class CarBuilder;
+
+template<MandatoryValues ... MandatoryFields>
+class CarBuilder2;
 
 class Car
 {
@@ -36,6 +41,9 @@ private:
     
     template<typename ... MandatoryValues>
     friend class CarBuilder;
+
+    template<MandatoryValues ... MandatoryFields>
+    friend class CarBuilder2;
 
     std::string brand_name_;
     std::string model_name_;
