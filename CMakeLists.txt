@@ -21,7 +21,6 @@ project(typestate_builder)
 set(SOURCES
     car.hpp
     car_builder.hpp
-    car_builder_2.hpp
     main.cpp
     mandatory_values.hpp
 )

@@ -13,11 +13,8 @@
 #include <cassert>
 #include <format>
 
-template<typename ... MandatoryValues>
-class CarBuilder;
-
 template<MandatoryValues ... MandatoryFields>
-class CarBuilder2;
+class CarBuilder;
 
 class Car
 {
@@ -38,12 +35,9 @@ public:
 
 private:
     Car() = default;
-    
-    template<typename ... MandatoryValues>
-    friend class CarBuilder;
 
     template<MandatoryValues ... MandatoryFields>
-    friend class CarBuilder2;
+    friend class CarBuilder;
 
     std::string brand_name_;
     std::string model_name_;
